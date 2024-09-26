@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.imgbg{
+    background: url('./assets//images/bmiformula.jpg') no-repeat;
+    background-size: cover;
+}
