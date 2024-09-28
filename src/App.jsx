@@ -26,38 +26,41 @@ const calcBmi=()=>{
   if(weight<=0 || height<=0 || age<=0 || age>100){
       toast.error("Weight,Height,Age must be valid")
      }
-  else{
-      if(isNaN(weight) || isNaN(height) || isNaN(age))
-        {
-           toast.error("Please enter your Weight,Height,Age")
-         }
-      else{
-            toast.success("Your Bmi Calculated successfully")
-            const yourbmi=weight/(height*height)
-            setBmi(yourbmi.toFixed(2))
 
-                if(yourbmi<=18 ){
-                  setMessage("Underweight")
-                
-                }
-                else if( yourbmi<25){
-                  setMessage("Normal")
-                }
-                
-                else if(yourbmi<30){
-                  setMessage("OverWeight")
-                }
-                else if(yourbmi<35){
-                  setMessage("Mild Obesity")
-                }
-                else if(yourbmi<40){
-                  setMessage("Moderate Obesity")
-                }
-                else{
-                  setMessage("Severe Obesity")
-                }
-                
-    }}
+  else{
+        if(isNaN(weight) || isNaN(height) || isNaN(age))
+          {
+            toast.error("Please enter your Weight,Height,Age")
+          }
+        else
+          {
+              toast.success("Your Bmi Calculated successfully")
+              const yourbmi=weight/(height*height)
+              setBmi(yourbmi.toFixed(2))
+
+                  if(yourbmi<=18 ){
+                    setMessage("Underweight")
+                  
+                  }
+                  else if( yourbmi<25){
+                    setMessage("Normal")
+                  }
+                  
+                  else if(yourbmi<30){
+                    setMessage("OverWeight")
+                  }
+                  else if(yourbmi<35){
+                    setMessage("Mild Obesity")
+                  }
+                  else if(yourbmi<40){
+                    setMessage("Moderate Obesity")
+                  }
+                  else{
+                    setMessage("Severe Obesity")
+                  }
+                  
+          }
+  }
 }
 const reload=()=>{
   setMessage('')
@@ -66,9 +69,9 @@ const reload=()=>{
 
   console.log(data)
   return (
-    <div className='w-full h-screen  flex items-center justify-center imgbg'>
+    <div className='w-full min-h-screen p-16 flex items-center justify-center imgbg'>
       <ToastContainer/>
-      <div className='sm:w-9/12 md:w-7/12 lg:w-6/12 xl:w-5/12 min-h-3/4 bg-black opacity-80  rounded-md flex flex-col p-10'>
+      <div className='sm:w-full md:w-7/12 lg:w-6/12  xl:w-5/12 min-h-3/4 bg-black opacity-80  rounded-md flex flex-col p-10'>
            <div>
             <label className='text-white font-bold'>
               Age
