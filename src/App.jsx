@@ -69,7 +69,7 @@ const reload=()=>{
 
   console.log(data)
   return (
-    <div className='w-full min-h-screen p-16 flex items-center justify-center imgbg'>
+    <div className='w-full min-h-screen p-12 flex items-center justify-center imgbg'>
       <ToastContainer/>
       <div className='sm:w-full md:w-7/12 lg:w-6/12  xl:w-5/12 min-h-3/4 bg-black opacity-80  rounded-md flex flex-col p-10'>
            <div>
